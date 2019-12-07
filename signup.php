@@ -16,8 +16,7 @@ h1{
   border-radius: 5px;
   padding: 4px;
   background-color: white;
-  border:10px solid crimson;
-  margin-right: 33%;
+  border:10px solid blue;
  }
 
 form{
@@ -33,7 +32,7 @@ form{
 input, textarea {
 font-size: 1em;
 text-align: center;
-background-color:crimson;
+background-color:white;
 border: 10px solid grey;
 }
 
@@ -65,25 +64,9 @@ border: 10px solid grey;
   font-size: 1em;
   
 }
-.clear{
-  background-color: white;
-  padding: 10px 25px;
-  text-align: center;
-  display: inline-block;
-  font-size: 15px;
-  margin: 4px 2px;
-  cursor: pointer;
-  color: black;
-  border:3px solid white;
-  font-family: areil;
-  font-size: 1em;
-}
 
 .submit:hover{
   color:green;
-}
-.clear:hover{
-  color:crimson;
 }
 
 				</style>
@@ -93,57 +76,40 @@ border: 10px solid grey;
     </head>
     <body>
         
-				<?php $title = "RESUME BUILDER"; ?> 
+				<?php $title = "Registration Form"; ?> 
         <h1><?php echo $title; ?></h1>
-        <form action="./resume.php" method="post">
+        <form action="./process.php" method="post">
             <div class="container">
-        <label for="first">First Name:<?php echo ($_POST['name']); ?></label><br/>
+            <label for="first">First Name:<?php echo ($_POST['name']); ?></label><br/>
             <input type="text" id="first" name="first">
-                <br/>
-        <label for="last">Last Name:</label><br/>
+            <br/>
+            <label for="last">Last Name:</label><br/>
             <input type="text" id="last" name="last">
             </div>
-						<div>
-            <label for="dob">Date of Birth:</label><br/>
-            <input type="date" id="dob" name="dob">
+            <div>
+            <label for="age">Age:</label><br/>
+            <input type="number" id="age" name="age">
             </div>
 						<div>
-						<label for="url">Github URL</label><br/>
-            <input type="url" id="url" name="url">
+            <label for="user">Username:</label><br/>
+            <input type="text" id="user" name="user">
             </div>
+						<div>
             <div class="container">
             <label for="email">Email:</label><br/>
             <input type="email" id="email" name="email">
             </div>
             <div class="container">
-            <label for="phone">Contact Number:</label><br/>
-            <input type="tel" id="phone" name="phone">
+            <label for="password">Password:</label><br/>
+            <input type="password" id="password" name="password">
+						<br/>
+            <label for="password_conf">Confirm Password:</label><br/>
+            <input type="password" id="password_conf" name="password_conf">
+            <br/>
+            <button type="submit" class="submit">Submit</button>
             </div>
 						<br/>
-            <div class="container">
-              <label for="prevemploy">Previous Employer:</label>
-						<p>Please enter (name, address, position, dates employed, contact)</p>
-              <textarea id="comments" rows="5"></textarea><br/>
-							<br/>
-              <div class="container">
-              <label for="prevemploy">Previous Employer:</label></br>
-							<p>Please enter (name, address, position, dates employed, contact)</p>
-              <textarea id="comments" rows="5"></textarea><br/>
-							<br/>
-              <div class="container">
-              <label for="prevemploy">Previous Employer:</label></br>
-							<p>Please enter (name, address, position, dates employed, contact)</p>
-              <textarea id="comments" rows="5"></textarea><br/>
-							<br/>
-						<div class="container">
-              <label for="prevemploy">Previous Employer:</label></br>
-							<p>Please enter (name, address, position, dates employed, contact)</p>
-              <textarea id="comments" rows="5"></textarea><br/>
-							<br/>
-              <label for="prevemploy">Skills and/or Achievements:</label></br>
-              <textarea id="comments" rows="5"></textarea><br/>
-                  <button type="submit" class="submit">Submit</button>
-              </div>
+           
             </form>
             <footer>
 
